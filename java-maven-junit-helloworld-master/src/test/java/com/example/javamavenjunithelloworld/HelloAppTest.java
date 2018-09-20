@@ -44,7 +44,7 @@ public class HelloAppTest {
 
         // Mock Hello used by HelloApp to throw the expected exception when invoked with setTimes(5).
         Hello hi = mock(Hello.class);
-        doThrow(new IllegalArgumentException("Nope.")).when(hi).setTimes(5);
+        doThrow(new IllegalArgumentException("Nope...")).when(hi).setTimes(5);
         // Sneakily insert our fake Hello class when it is created.
         whenNew(Hello.class).withNoArguments().thenReturn(hi);
 
