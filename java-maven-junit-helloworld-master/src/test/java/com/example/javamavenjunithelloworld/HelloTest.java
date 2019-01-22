@@ -23,7 +23,7 @@ public class HelloTest {
 
         Hello hi = new Hello();
         hi.sayHello(stream);
-        assertThat(os.toString(), is(equalTo(Hello.HELLO + "\r\n")));
+        assertThat(os.toString(), is(equalTo(Hello.HELLO + "\n")));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class HelloTest {
         hi.sayHello(stream);
 
         // Does it say "Hello!" three times?
-        String goal = Hello.HELLO + "\r\n" + Hello.HELLO + "\r\n" + Hello.HELLO + "\r\n";
+        String goal = Hello.HELLO + "\n" + Hello.HELLO + "\n" + Hello.HELLO + "\n";
         assertThat(os.toString(), is(equalTo(goal)));
     }
 
